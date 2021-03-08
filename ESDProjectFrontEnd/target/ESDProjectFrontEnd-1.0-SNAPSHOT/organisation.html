@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ESD</title>
+  <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body style="background-image: url('bg.jpeg');">
+  <div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="iiitb.png" class="img-fluid" width="40" height="40"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Academic ERP</a>
+        </li>
+      </ul>
+    </div>
+    <span class="col-sm-6"></span>
+    <button onclick="logout()" style="background-color: black;color: white;">Logout</button>
+  </div>
+    </nav>
+  </div>
+  <div class="row" style="margin-left: 5%;margin-top: 1%;">
+    <ul class="pagination">
+    <li class="page-item">
+      <a class="page-link bg-primary text-white" href="education.html" aria-label="Previous">
+        <span aria-hidden="true">&laquo;Education Details</span>
+      </a>
+    </li>
+    <span class="col-sm-8"></span>
+    <li class="page-item">
+      <a class="page-link bg-primary text-white" href="dashboard.html" aria-label="Next">
+        <span aria-hidden="true">Basic Details&raquo;</span>
+      </a>
+    </li>
+  </ul>
+  </div>
+      <div class="row card col-md-8 order-md-1" style="margin-left: 15%;margin-top: 5%;">
+        <h4 class="card-header bg-primary text-white mb-3">Alumni Organisation Details</h4>
+        <div class="row" style="margin-left: 5%;margin-top: 1%;">
+          <ul class="pagination">
+            <li class="page-item">
+              <button class="btn btn-primary text-white col-auto" id="previous" onclick="prev()">&laquo;Previous</button>
+              </a>
+            </li>
+            <span class="col-sm-8"></span>
+            <li class="page-item">
+              <button class="btn btn-primary text-white col-auto" id="next" onclick="next()">Next&raquo;</button>
+            </li>
+          </ul>
+        </div>
+        <div class="row">
+          <div class="alert alert-danger" id="error-alert" role="alert" style="display: none; margin-top: 20px">
+            Sorry some unknown error occured!!
+          </div>
+        </div>
+        <form id="form">
+            <div class="mb-3 row" style="margin-left: 3%;">
+    <label for="org" class="col-auto col-form-label">Organisation</label>
+    <div class="col-sm-4" style="margin-left: 2%;">
+      <input type="text" id="org">
+    </div>
+  </div>
+          <div class="mb-3 row" style="margin-left: 3%;">
+    <label for="pos" class="col-auto col-form-label">Position:</label>
+    <div class="col-sm-4" style="margin-left: 6%;">
+      <input type="text" id="pos">
+    </div>
+  </div>
+  <div class="mb-3 row" style="margin-left: 3%;">
+    <label for="jdate" class="col-auto col-form-label">Joining Date:</label>
+    <div class="col-sm-4" style="margin-left: 2.5%;">
+      <input type="date" id="jdate">
+    </div>
+  </div>
+  <div class="mb-3 row" style="margin-left: 3%;">
+    <label for="ldate" class="col-auto col-form-label">Leaving Date:</label>
+    <div class="col-sm-4" style="margin-left: 2%;">
+      <input type="date" id="ldate">
+    </div>
+  </div>
+        </form>
+  <div class="row mb-3" >
+    <div>
+      <span class="col-sm-4"></span>
+      <button class="btn btn-primary" onclick="add()">+Add</button>
+      <button class="btn btn-primary" onclick="update()">Update</button>
+      <button class="btn btn-primary" onclick="del()">Delete</button>
+    </div>
+  </div>
+          <div class="row">
+            <div class="alert alert-success" id="success-alert" role="alert" style="display: none; margin-top: 20px">
+              Data Updated Successfuly!!
+            </div>
+          </div>
+
+      </div>
+<footer class="bg-dark" style="margin-top: 5%;">
+    <div>
+      <p class="text-white" style="padding-left: 40%;">Developed by Bhashkar Yadav</p>
+    </div>
+  </footer>
+</body>
+<script src="assets/js/organisation.js"></script>
+</html>

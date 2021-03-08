@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ESDProjectFrontEnd:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>ESDProjectFrontEnd</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="ESDProjectFrontEnd-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="ESDProjectFrontEnd:war exploded" />
+    </root>
+  </artifact>
+</component>

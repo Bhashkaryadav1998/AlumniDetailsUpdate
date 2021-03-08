@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ESD</title>
+</head>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<body style="background-image: url('bg.jpeg');">
+<div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="iiitb.png" alt="iiitb" class="img-fluid" width="40" height="40"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Academic ERP</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="card mx-auto col-sm-4" style="margin-top: 10%;">
+    <div class="card-header bg-primary text-white">Alumni Login</div>
+    <div class="card-body">
+        <form id="login-validation">
+            <div class="mb-3 row">
+                <label for="email" class="col-auto col-form-label">Email:</label>
+                <div class="col-sm-4" style="margin-left: 7%;">
+                    <input type="email" id="email" placeholder="email@example.com">
+                </div>
+            </div>
+            <div class="mb-4 row">
+                <label for="password" class="col-auto col-form-label">Password:</label>
+                <div class="col-sm-7">
+                    <input type="password" class="form-control" id="password">
+                </div>
+            </div>
+            <div class="col-auto" style="margin-left: 40%">
+                <button type="submit" id="submit-button" class="btn btn-primary mb-2">Submit</button>
+            </div>
+            <button class="btn btn-lg btn-primary btn-block" disabled id="spinner-button" style="display: none;" type="submit">
+                <span aria-hidden="true" class="spinner-border spinner-border-sm" role="status"></span>
+                Signing in...
+            </button>
+            <div class="alert alert-warning" id="login-alert" role="alert" style="display: none; margin-top: 20px">
+                Invalid Email Address or Password!!
+            </div>
+        </form>
+    </div>
+</div>
+<footer class="bg-dark" style="margin-top: 11.4%;">
+    <div>
+        <p class="text-white" style="padding-left: 40%;">Developed by Bhashkar Yadav</p>
+    </div>
+</footer>
+</body>
+
+<script src="assets/js/login-validation.js"></script>
+</html>
